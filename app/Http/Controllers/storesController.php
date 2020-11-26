@@ -8,7 +8,15 @@ class storesController extends Controller
 {
     public function index()
     {
-        $stores = Store::all();
+        $stores = Store::get();
         return view ('stores.index',compact('stores'));
     }
+
+    public function show(Store $store)
+    {
+        // $stores->products;
+   
+        return view('stores.show', compact('store'));
+
+}
 }

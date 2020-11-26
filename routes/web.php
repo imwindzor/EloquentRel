@@ -22,4 +22,5 @@ Route::get('/', 'TemplatesController@index');
 Route::get('/products', 'ProductsController@index');
 
 
-Route::get('/stores','storesController@index');//index
+Route::get('/stores','storesController@index');
+Route::get('/stores/{store}','storesController@show');

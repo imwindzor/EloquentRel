@@ -1,33 +1,29 @@
-
 @extends('layouts.master')
-@section('container')
-<div class="container">
-    <h1>COMPANY C STORES BRANCH</h1>
+@section('content')
 
-    
-    <div class="row"
-    {{-- <table class="table">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Store location</th>
-                
-            </tr>
-        </thead>
-        <tbody>
-            @foreach ($stores as $store)
-            <tr>
-                 <td>{{ $store->id }}</td>
-                <td>{{ $store->name }}</td>
-                <td>{{ $store->store_location }}</td>
-            
-               
-            </tr> --}}
-                
-            @endforeach
-        {{-- </tbody>
-    </table> --}}
+<div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <h1 class="header center orange-text">COMPANY C STORES BRANCH</h1>
+      <div class="row center">
+       <!--  <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+ -->      </div>
+      <br><br>
+  
+  
+<div class ="row">
+    <ul>
+        @foreach ($stores as $store)
+        <li>
+        <a href="/stores/{{$store->id}}">
+            {{$store->name}}
+        </a>
+        </li>
+        @endforeach
+    </ul>
 </div>
-    
+</div>
+</div>
 @endsection
+
+
