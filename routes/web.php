@@ -18,3 +18,5 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/', 'TemplatesController@index');
+
+Route::get('/products', 'ProductsController@index');
